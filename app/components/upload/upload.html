@@ -1,0 +1,12 @@
+<div class="upload-dialog">
+    <form id="uploadForm" encType="multipart/form-data">
+        <input type="hidden" name="projectId" value="{{projectId}}">
+        <div class="name">
+            <span class="red">*</span> &nbsp;脚本名称：<input placeholder="请输入脚本名称" type="name" id="uploadName" name="{{scriptName}}"/>
+        </div>
+        <input class="repeat-file" multiple type="file" ref='update_input' name="{{name}}" />
+        <p class="error-msg"></p>
+        <button type="button" class="ts-op-button button btn-blue mr-10 iconfont icon-5-copy">上传</button>
+    </form>
+    <p class="upload-desc"></p>
+</div>

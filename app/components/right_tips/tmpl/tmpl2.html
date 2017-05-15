@@ -1,0 +1,45 @@
+<div class="right-tips-ctt">
+    <div class="right-tips-header">
+        <span class="right-tips-name">热门文章</span>
+        <span class="right-tips-button-ctt">
+            {{if hotIndex==1}}
+            <button class="right-tips-button right-tips-button-focus">
+                收藏</button>
+            {{else}}
+            <button class="right-tips-button">
+                收藏</button>
+                {{/if}}
+            {{if hotIndex==2}}
+            <button class="right-tips-button right-tips-button-focus">
+                点赞</button>
+                {{else}}
+                <button class="right-tips-button">
+                    点赞</button>
+                {{/if}}
+            {{if hotIndex==3}}
+            <button class="right-tips-button right-tips-button-focus">
+                评论</button>
+                {{else}}
+                <button class="right-tips-button">
+                    评论</button>
+                    {{/if}}
+        </span>
+    </div>
+    <div class="right-tips-list-ctt right-33">
+        <ul class="right-tips-list">
+            {{each data as hot idx}}
+            <li class="right-tips-item">
+                <div class="hero-ctt">
+                    {{if idx<3}}
+                    <span class="right-tips-index right-tips-index-active">{{idx + 1}}</span>
+                    {{else}}
+                    <span class="right-tips-index">{{idx + 1}}</span>
+                    {{/if}}
+                    <a class="hero-word" href="{{encode(hot.articleId,'100')}}">
+                        {{hot.title}}</a>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

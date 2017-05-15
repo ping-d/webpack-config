@@ -1,0 +1,24 @@
+<div class="right-tips-ctt">
+    <div class="right-tips-header">
+        <span class="right-tips-name">我要内推</span>
+        <span class="right-tips-button-ctt">
+            <a href="/built/art-list/art_list.html?hId=102&catgoryId=102">更多></a>
+        </span>
+    </div>
+    <div class="right-tips-list-ctt right-33">
+        <ul class="right-tips-list">
+            {{each data as inter idx}}
+            <li class="right-tips-item">
+                <div class="hero-ctt">
+                    {{if idx<3}}
+                    <span class="right-tips-index right-tips-index-active">{{idx + 1}}</span>
+                    {{else}}
+                    <span class="right-tips-index">{{idx + 1}}</span>
+                    {{/if}}
+                    <a class="hero-word" href="{{encode(inter.articleId,'102')}}">{{inter.title}}</a>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

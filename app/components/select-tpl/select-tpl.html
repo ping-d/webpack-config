@@ -1,0 +1,16 @@
+<select name="{{name}}" id="{{name}}">
+    {{if tip}}
+    <option value="">{{tip}}</option>
+    {{/if}}
+    {{if list && list.length > 0}}
+    {{each list as item index}}
+    {{if item.key == selectName}}
+    <option value="{{item.key}}" selected="selected" >
+        {{else}}
+    <option value="{{item.key}}" >
+        {{/if}}
+        {{item.value}}
+    </option>
+    {{/each}}
+    {{/if}}
+</select>

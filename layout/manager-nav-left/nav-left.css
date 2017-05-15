@@ -1,0 +1,89 @@
+#navLeftWrapper {
+    float: left;
+    width:17%;
+    overflow: hidden;
+    max-width: 240px;
+    height:100%;
+    background-color: #34383c;
+    overflow-y: auto;
+}
+#navLeftWrapper.close {
+    width:0;
+}
+.nav-left {
+    color:#ababc3;
+    width:100%;
+
+}
+.nav-left ul li {
+    position:relative;
+    width:100%;
+    font-size:14px;
+    height:63px;
+    line-height: 63px;
+    background: url("../../asset/img/menu_item.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.nav-left ul li.child {
+    background: url("../../asset/img/nav-left/menu_child_not_choosed_bg.png") no-repeat center;
+}
+.nav-left ul li.child.active {
+    background: url("../../asset/img/nav-left/menu_child_choosed_bg.png") no-repeat center;
+}
+.nav-left ul li:last-child {
+    background: url("../../asset/img/nav-left/menu_last_bg.png") no-repeat center;
+}
+.nav-left ul li i {
+    margin-right: 5px;
+    width: 20%;
+    display: inline-block;
+    text-align: right;
+}
+.nav-left ul li img.transparency {
+    opacity: 0;
+}
+.nav-left ul li span {
+    width:90px;
+    display: inline-block;
+    text-align: left;
+}
+.nav-left ul li .right-icon {
+    width:12px;
+    height:12px;
+    position:absolute;
+    top:25px;
+    right:16%;
+    background:url('../../asset/img/nav-left/show.png') no-repeat center;
+    background-size:100% 100%;
+}
+/**展开*/
+.nav-left ul li.show .right-icon {
+    background:url('../../asset/img/nav-left/close.png') no-repeat center;
+}
+.nav-left ul li.active {
+    background: url("../../asset/img/menu_item_active.png") no-repeat center;
+    color:#258cff;
+    background-size: 100% 100%;
+}
+.nav-left ul li.child {
+    display: none;
+}
+.nav-left ul li.active .left-active-border {
+    display: block;
+    position: absolute;
+    left: 0;
+    width:3px;
+    height:100%;
+    top:0;
+    background-color:#258cff;
+}
+.nav-left ul li.child.active {
+    color:#258cff;
+}
+.left-top-title {
+    width:100%;
+    height:85px;
+    background: url('../../asset/img/logo.png') no-repeat center;
+    background-size:123px 53px;
+
+}

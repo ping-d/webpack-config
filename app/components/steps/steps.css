@@ -1,0 +1,56 @@
+.steps {
+    width:97%;
+    margin:0 auto;
+    height:125px;
+    background-color: #f5f5f5;
+    border:1px solid #e5e5e5;
+    text-align: center;
+}
+.steps .item-wrapper {
+    width:13%;
+
+    display: inline-block;
+
+}
+.steps .num {
+    width:42px;
+    height:42px;
+    margin: 30px auto 10px auto;
+    background-size:100%;
+}
+.steps .num.blue-1 {
+    background:url("../../../asset/img/service-application/blue_1.png") no-repeat center;
+}
+.steps .num.grey-2 {
+    background:url("../../../asset/img/service-application/grey_2.png") no-repeat center;
+}
+.steps .num.blue-2 {
+    background:url("../../../asset/img/service-application/blue_2.png") no-repeat center;
+}
+.steps .num.blue-3 {
+    background:url("../../../asset/img/service-application/blue_3.png") no-repeat center;
+}
+.steps .num.grey-3 {
+    background:url("../../../asset/img/service-application/grey_3.png") no-repeat center;
+}
+.steps .num.blue-4 {
+    background:url("../../../asset/img/service-application/blue_4.png") no-repeat center;
+}
+.steps .num.grey-4 {
+    background:url("../../../asset/img/service-application/grey_4.png") no-repeat center;
+}
+
+.steps .step-name {
+    font-size: 16px;
+    color:  #5b5b5b;
+}
+.steps .line {
+    width: 100%;
+    height: 2px;
+    background-color: #a7cfff;
+    position: relative;
+    top: -33px;
+}
+.steps .line.grey{
+    background-color:#bbb;
+}

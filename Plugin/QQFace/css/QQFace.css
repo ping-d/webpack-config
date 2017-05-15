@@ -1,0 +1,13 @@
+/*
+FaceBox
+*/
+#SmohanFaceBox{ display:block; width:352px; height:187px; position:absolute; top:-60px; left:-30px; z-index:9999;}
+#SmohanFaceBox .Corner{ display:block; width:28px; height:15px;position:absolute; left:45px; top:0; z-index:100;}
+#SmohanFaceBox .Content{ display:block; width:350px; height:185px; padding:10px; background:#ffffff;border:1px solid #cfcfcf; z-index:99; margin:14px 0px 0px 0px; box-shadow:0px 1px 10px rgba(204,204,204,1); border-radius:2px;}
+#SmohanFaceBox .Content h3{ margin:0; padding:0; width:350px; height:30px; line-height:26px; display:block; font-size:14px; text-align:left;}
+#SmohanFaceBox .Content h3 span{ float:left;}
+#SmohanFaceBox .Content h3 .close{ display:inline-block; width:16px; height:16px;float:right; cursor:pointer;}
+#SmohanFaceBox .Content h3 .close:hover{ background-position:-46px -120px;}
+#SmohanFaceBox .Content ul{ margin:5px 0px 0px 0px; padding:0; list-style-type:none;}
+#SmohanFaceBox .Content ul li{ display:inline-block; width:22px; height:22px; padding:2px; border:1px solid #f8f8f8; float:left;}
+#SmohanFaceBox .Content ul li:hover{ border-color:#6C3;}

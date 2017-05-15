@@ -1,0 +1,137 @@
+.ts-table-ctt-parent{
+    margin-bottom: 30px;
+    border: 1px solid #e7e7e7;
+    font-size: 14px;
+}
+.ts-table-ctt{
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: none;
+    overflow-x: auto;
+}
+.ts-table-ctt thead tr{
+    height: 40px;
+    line-height: 40px;
+}
+.ts-table-ctt tr{
+    padding: 10px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+.ts-table-ctt tr td{
+    padding: 10px 5px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.ts-table-ctt tr th{
+    padding-left: 15px;
+    text-align: left;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.ts-table-ctt tr th span{
+    display: block;
+    width: 150px;
+}
+.ts-table-ctt tr .width-100{
+    display: block;
+    width: 100px;
+}
+.ts-table-ctt tr th .width-230{
+    width: 230px;
+}
+.ts-table-ctt tbody tr{
+    background-color: #f8f8f8;
+}
+.ts-table-ctt tbody tr:hover{
+    background-color: #eee;
+}
+.ts-table-ctt tbody .ts-table-odd{
+    background-color: #fff;
+}
+.ts-table-ctt tr td{
+    padding-left: 15px;
+    text-align: left;
+}
+.ts-table-ctt tr td .ts-ttd{
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    word-wrap: break-word;
+}
+.ts-table-ctt tr td .ts-ttd-index{
+    text-align: center;
+}
+.ts-table-ctt tr th .ts-theader-index{
+    width: 60px;
+}
+.ts-table-ops{
+    position: relative;
+    height: 19px;
+}
+.ts-table-ops ul{
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    width: 70px;
+    height: 27px;
+    overflow: hidden;
+}
+.ts-table-ops ul li{
+    padding-left: 10px;
+    color: #529dfa;
+    height: 27px;
+    line-height: 27px;
+}
+.ts-table-ops ul li a{
+    display: inline-block;
+    color: #529dfa;
+}
+.ts-table-ops ul li:hover{
+    background-color: #fff;
+    color: #fff;
+}
+.ts-table-ops ul li a:hover{
+    color: #fff;
+}
+.ts-table-ops ul:hover{
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    z-index: 1;
+}
+.ts-table-ops ul:hover .iconfont{
+    display: none;
+}
+.ts-table-ops ul li .iconfont{
+    font-size: 11px;
+    display: inline-block;
+}
+.ts-table-ops ul li:hover{
+    display: block;
+    background-color: #529dfa;
+    color: #fff;
+}
+.ts-table-htt{
+    color: #529dfa;
+}
+.ts-table-htt:hover{
+    color: #2563a0;
+}
+.ts-table-ops ul li:hover a{
+    color: #fff;
+}
+.ts-table-ops ul li a:hover{
+    color: #fff;
+}
+.ts-table-ctt tbody .color-ffcece{
+    background-color: #ffcece;
+}
+.ts-table-ctt tbody .color-ffcece:hover{
+    background-color: #ffb9b9;
+}
+.ts-table-ctt tbody .color-fff5ae{
+    background-color: #fff5ae;
+}
+.ts-table-ctt tbody .color-fff5ae:hover{
+    background-color: #fff298;
+}

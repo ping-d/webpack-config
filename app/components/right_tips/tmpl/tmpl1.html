@@ -1,0 +1,53 @@
+<div class="right-tips-ctt">
+    <div class="right-tips-header">
+        <span class="right-tips-name">英雄榜</span>
+        <span class="right-tips-button-ctt">
+            {{if heroIndex==1}}
+            <button class="right-tips-button right-tips-button-focus">
+            {{else}}
+            <button class="right-tips-button">
+            {{/if}}
+            成长值
+            </button>
+            {{if heroIndex==2}}
+            <button class="right-tips-button right-tips-button-focus">
+            {{else}}
+            <button class="right-tips-button">
+                {{/if}}
+                积分
+            </button>
+        </span>
+    </div>
+    <div class="right-tips-list-ctt">
+        <ul class="right-tips-list">
+            {{each data as hero i}}
+            <li class="right-tips-item">
+                <div class="hero-ctt">
+                    <a href="{{url+hero.userId}}">
+                        {{if i<3}}
+                        <span class="right-tips-index right-tips-index-active">
+                            {{i+1}}
+                        </span>
+                        {{else}}
+                        <span class="right-tips-index">
+                            {{i+1}}
+                        </span>
+                        {{/if}}
+                    <span class="hero-img-ctt">
+                        {{if !hero.profilePhoto}}
+                            <img src="../../../img/avatar.png" />
+                        {{else}}
+                            <img src="{{hero.profilePhoto}}" />
+                        {{/if}}
+                        <span class="hero-name">{{hero.nickName}}</span>
+                    </span>
+                        <span class="hero-group">{{floatNum(hero.growthValue)}}成长值</span>
+                        <span class="hero-group hero-point">{{floatNum(hero.score)}}积分</span>
+
+                    </a>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

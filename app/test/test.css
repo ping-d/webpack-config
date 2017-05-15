@@ -1,0 +1,6 @@
+#content {
+    padding-left: 17%;
+}
+#content.close {
+    padding-left: 0;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>简单的jQuery分页插件下载</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+a{ text-decoration:none;}
+a:hover{ text-decoration:none;}
+.tcdPageCode{padding: 15px 20px;text-align: left;color: #ccc;text-align:center;}
+.tcdPageCode a{display: inline-block;color: #428bca;display: inline-block;height: 25px;	line-height: 25px;	padding: 0 10px;border: 1px solid #ddd;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode a:hover{text-decoration: none;border: 1px solid #428bca;}
+.tcdPageCode span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #428bca;	border: 1px solid #428bca;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode span.disabled{	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
+</style>
+</head>
+<body>
+<br><br><br>
+
+<div class="tcdPageCode"></div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.page.js"></script>
+<script>
+    var pageSize = 10,pageNo = 1,pages;
+    function article(pageNo,pageSize) {
+        /*获取我的文章list*/
+        $.ajax({
+            url:"http://10.122.1.76:18090/api/user/login",
+            type:"post",
+            data :{
+                username:"15928756603",
+                password:"123456"
+            },
+            success:function( data ){
+                if(data.ok){
+                    var result = data.result ;
+                    $.ajax({
+                        url:"http://10.122.1.76:18090/api/article/list",
+                        data:{ sku :result , pageNo : pageNo , pageSize : pageSize},
+                        type:"GET",
+                        success:function( res ){
+                            pages = Math.ceil(11/10);
+                                $(".tcdPageCode").createPage({
+                                    pageCount:pages || 1,//总页码
+                                    current:pageNo//默认进入第一页
+                                });
+                            if( res.ok ){
+                                var articleData = res.result ;
+                                console.log(articleData)
+                            }
+                        }
+                    })
+                }
+            }
+        });
+    }
+    $(function () {
+            article(pageNo,pageSize);
+            $(".tcdPageCode").createPage({
+                pageCount:1,
+                backFn:function(p){
+                    article(p,pageSize);
+                }
+            });
+    });
+
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+<div id="div"></div>
+</body>
+</html>

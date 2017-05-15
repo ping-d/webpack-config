@@ -1,0 +1,45 @@
+<div class="steps">
+    <div class="item-wrapper">
+        <div class="num blue-1"></div>
+        <div class="step-name">选择服务</div>
+    </div>
+    <div class="item-wrapper">
+        <div class="line"></div>
+    </div>
+
+    <div class="item-wrapper">
+        {{if data<2}}
+        <div class="num grey-2"></div>
+        {{else}}
+        <div class="num blue-2"></div>
+        {{/if}}
+        <div class="step-name">选择参数</div>
+    </div>
+    <div class="item-wrapper">
+        <div class="line {{if data<2}} grey{{/if}}"></div>
+    </div>
+
+    <div class="item-wrapper">
+        {{if data<3}}
+        <div class="num grey-3"></div>
+        {{else}}
+        <div class="num blue-3"></div>
+        {{/if}}
+        <div class="step-name">审核申请</div>
+    </div>
+    <div class="item-wrapper">
+        <div class="line {{if data<3}} grey{{/if}}"></div>
+    </div>
+
+    <div class="item-wrapper">
+        {{if data<4}}
+        <div class="num grey-4"></div>
+        {{else}}
+        <div class="num blue-4"></div>
+        {{/if}}
+        <div class="step-name">申请成功</div>
+    </div>
+
+
+
+</div>

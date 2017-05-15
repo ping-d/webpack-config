@@ -1,0 +1,35 @@
+    <div class="nav-left">
+        <div class="left-top-title">
+
+        </div>
+        <ul>
+            {{each data}}
+                {{if $value.link}}<a href="{{$value.link}}">{{/if}}
+                <li data-id="{{data[$index].id}}">
+                    <div class="left-active-border hide"></div>
+                    <i class="iconfont {{$value.icon}}"></i>
+                    <span>{{data[$index].name}}</span>
+                    {{if data[$index].rightIcon}}<span class="right-icon"></span>{{/if}}
+
+                </li>
+            {{if $value.link}}</a>{{/if}}
+                {{if data[$index].children}}
+                    {{each data[$index].children}}
+                    <a href="{{$value.link}}">
+                        <li class="child" data-parent="{{$value.parent}}">
+                            <div class="left-active-border hide"></div>
+                            <i class="transparency iconfont" ></i>
+                            <span>{{$value.name}}</span>
+                        </li>
+                    </a>
+                    {{/each}}
+
+                {{/if}}
+
+
+
+            {{/each}}
+
+        </ul>
+
+    </div>
